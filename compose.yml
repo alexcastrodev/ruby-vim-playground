@@ -1,0 +1,14 @@
+services:
+  playground:
+    image: ruby:3.3.5
+    container_name: p-ruby
+    stdin_open: true
+    tty: true
+    command: tail -f /dev/null
+    volumes:
+      - ./playground:/usr/src/app
+      - .SpaceVim.d/:/root/.SpaceVim.d
+    working_dir: /usr/src/app
+    build:
+      context: .
+      dockerfile: Dockerfile
