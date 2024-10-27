@@ -7,7 +7,6 @@ services:
     command: tail -f /dev/null
     volumes:
       - ./playground:/usr/src/app
-      - .SpaceVim.d/:/root/.SpaceVim.d
     working_dir: /usr/src/app
     build:
       context: .
