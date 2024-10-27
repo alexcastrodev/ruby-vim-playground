@@ -1,1 +1,1 @@
-docker exec -it p-ruby /bin/zsh
+docker exec -it p-ruby /bin/bash

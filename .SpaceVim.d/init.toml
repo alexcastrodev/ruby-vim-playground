@@ -1,0 +1,35 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2023 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer, the value of this option is a string.
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    autocomplete_method = "coc"
+
+# Enable autocomplete layer
+[[layers]]
+    name = "autocomplete"
+    auto-completion-return-key-behavior = "complete"
+    auto-completion-tab-key-behavior = "cycle"
+
+[[layers]]
+    name = "shell"
+    default_position = "top"
+    default_height = 30
+
+# This is an example for adding custom plugins lilydjwg/colorizer
+[[custom_plugins]]
+    repo = "lilydjwg/colorizer"
+    merged = false
+
+[[layers]]
+    name = "lang#ruby"

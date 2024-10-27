@@ -1,13 +1,10 @@
 services:
-  playground:
-    image: ruby:3.3.5
-    container_name: p-ruby
-    stdin_open: true
-    tty: true
-    command: tail -f /dev/null
-    volumes:
-      - ./playground:/usr/src/app
-    working_dir: /usr/src/app
+  p-ruby:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: p-ruby
+    command: tail -f /dev/null
+    working_dir: /app
+    volumes:
+      - ./playground:/app
